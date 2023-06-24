@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Players</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("https://freepngimg.com/save/135627-basketball-silhouette-team-free-download-png-hq/1648x890");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: black;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        h5 {
+            margin-top: 10px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basketball Players</h1>
+
+    {{#each players}}
+    <hr>
+    <div>
+        <a href="/players/{{this._id}}">
+            <h2>
+                <li>{{this.name}}</li>
+            </h2>
+        </a>
+        <h5>Position: {{this.position}}</h5>
+    </div>
+    <hr>
+    {{/each}}
+</body>
+</html>

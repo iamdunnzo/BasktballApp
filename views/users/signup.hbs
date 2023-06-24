@@ -1,0 +1,89 @@
+<style>
+  body {
+    background-image: url("https://media0.giphy.com/media/3o6fJbxSSH6poHZQha/giphy.gif?cid=6c09b952kk2r46p9q0j4l8ysab35g1isfsppsl1yf9vv9jy7&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: hsl(206, 70%, 8%);
+    height: 100vh;
+    width: 100vw; 
+  }
+
+  .form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.8); 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+ button {
+    padding: 10px 20px;
+    background-color: red; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049; 
+  }
+
+  .form-heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<form action="/signup" method="POST" class="form-container">
+  <h1 class="form-heading">Signup</h1>
+
+  <div class="form-group">
+    <label for="username">Email:</label>
+    <input type="text" id="username" name="username" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" class="form-control">
+  </div>
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" id="name" name="theName" class="form-control">
+</div>
+<div class="form-group">
+<label for="myFavoritePlayer">Favorite Player:</label>
+<input type="text" id="favorite" name="myFavoritePlayer" class="form-control">
+</div>
+<div class="form-group">
+<label for="theAge">Age:</label>
+    <input type="text" id="age" name="theAge" class="form-control"> 
+</div>
+<div class="form-group">
+<label for="theJersey">Jersey #:</label>
+    <input type="text" id="jersey" name="theJersey" class="form-control">
+</div>
+
+  <button class="btn btn-primary">Submit</button>
+</form>

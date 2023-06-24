@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GotNEXT</title>
+    <style>
+        body {
+            background-image: url("https://www.pngmart.com/files/21/Basketball-Player-PNG-Pic.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: hsl(0, 0%, 100%);
+        }
+
+        .player-list-container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(245, 245, 245, 0.8); 
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: black;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: flash 3s infinite;
+        }
+
+        @keyframes flash {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: black;
+            font-size: 18px;
+            animation: fadeIn 1s;
+            animation-delay: 0.3s;
+            animation-fill-mode: backwards;
+        }
+
+        /* Add animation keyframes for fade in effect */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+
+        img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .paragraph {
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: "Verdana", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-list-container">
+        <h3>Welcome to GotNEXT</h3>
+        <p class="paragraph">Want to hoop?</p>
+        <p class="paragraph">Have you ever had the urge to just ball? Say less, we got you! </p>
+        <p class="paragraph">GotNEXT is the innovative app to search, discover, and add a court to the database for hoopers like yourself. Seamlessly navigate through the interface, search for courts, and pick up a game to reserve your spot on the court.</p>
+        <p class="paragraph">Join a community of like-minded ballers and lace 'em up!</p>
+        <p class="paragraph">To unlock the full potential of GotNEXT, sign up for a personalized account. Create your profile, add your favorite courts, and get NEXT on the court. Never miss out on any more pickup games.</p>
+        <p class="paragraph">Getting started is easy. Simply sign up for an account or log in if you're already a member. Check out the courts and other ballers out there, and let's BALL!</p>
+        <p class="paragraph">To get started, please sign up or log in:</p>
+        <div>
+            <a href="/signup" style="color: red;">Click here to sign up</a>
+        </div>
+        <div>
+            <a href="/login" style="color: red;">Click here to log in</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<style>
+  body {
+    background-image: url("https://media4.giphy.com/media/eTmhDrIQGaBAFfOQOu/giphy.gif?cid=6c09b952tnxe0t380ytvp8307gdf2lmaut0ao2x7flkgaeek&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: hsl(206, 70%, 8%);
+  }
+
+  .login-form {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.8); 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: red; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .login-heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<form action="/login" method="POST" class="login-form">
+  <h1 class="login-heading">Login</h1>
+
+  <div class="form-group">
+    <label for="username">Email:</label>
+    <input type="text" id="username" name="username" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" class="form-control">
+  </div>
+
+  <button class="btn btn-primary">Submit</button>
+</form>

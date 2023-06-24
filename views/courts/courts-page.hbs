@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courts Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/024/596/299/original/3d-rendering-basketball-court-and-hoop-front-view-free-png.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: black;
+            text-align: left;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .court-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .court {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .court h3 {
+            margin-top: 10px;
+        }
+
+        .court img {
+            height: 200px;
+            margin-top: 10px;
+        }
+
+        .players-container {
+            margin-top: 30px;
+        }
+
+        .player {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin-bottom: 20px;
+        }
+
+        .player h2 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Courts Page</h1>
+
+    {{#if theUserObject}}
+    <h2> Welcome, {{theUserObject.username}} </h2>
+    {{/if}}
+
+    <div class="court-container">
+        {{#each allCourts }}
+        <div class="court">
+            <hr>
+            <a href="/courts/{{this._id}}">
+                <h3>{{this.name}}</h3>
+            </a>
+            <h5>Level: {{this.level}}</h5>
+            <p>Location: {{this.location}}</p>
+            <img src="{{this.image}}" alt="Court Image">
+            <hr>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="players-container">
+        {{#each players}}
+        <div class="player">
+            <hr>
+            <a href="/players/{{this._id}}">
+                <h4>{{this.name}}</h4>
+            </a>
+            <h5>Position: {{this.position}}</h5>
+            <hr>
+        </div>
+        {{/each}}
+    </div>
+</body>
+</html>
